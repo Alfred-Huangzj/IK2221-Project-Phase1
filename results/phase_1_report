@@ -1,0 +1,26 @@
+==> Testing NAPT gateway ping from h1 and h2
+  [OK] NAPT gateway ping from h1
+  [OK] NAPT gateway ping from h2
+==> Testing h1 → llm1 (100.0.0.45) through NAPT
+  [FAIL] ICMP outbound failed for h1
+==> Testing h2 → llm2 (100.0.0.45) through NAPT
+  [FAIL] ICMP outbound failed for h2
+==> Testing h1 → llm3 (100.0.0.45) through NAPT
+  [FAIL] ICMP outbound failed for llm3
+==> Testing inbound llm1 → h1 (10.0.0.50) should be blocked
+  [OK] inbound to private IP is blocked
+==> Testing ping to unused 10.0.0.99 (should fail)
+  [OK] unused private IP dropped
+==> Testing LB ARP for VIP
+  [FAIL] h1 ARPed VIP
+==> Testing HTTP GET → VIP
+  [OK] HTTP GET blocked by LB
+==> Testing IDS allows POST
+  [FAIL] POST blocked by IDS
+==> Testing IDS blocks TRACE
+  [OK] TRACE dropped by IDS
+==> Testing IDS code-injection catch
+  [OK] Injection dropped by IDS → insp
+
+=== ALL TESTS FAILED ===
+

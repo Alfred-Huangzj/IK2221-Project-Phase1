@@ -1,0 +1,8 @@
+make[1]: Entering directory '/home/ik2221/ik2221-phase1'
+starting the baseController!
+# Copy your controller to the POX folder
+cp applications/controller/* /opt/pox/ext/
+# Copy nfv click functions to the pox controller folder
+cp applications/nfv/*.click /opt/pox/ext/
+# Run controller that setups normal switches and CLICK nodes
+sudo python /opt/pox/pox.py baseController

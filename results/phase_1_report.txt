@@ -1,0 +1,8 @@
+Static ARP entry configured for lb1.
+Starting services...
+HTTP services started
+Ping test FAILED: client=h1, target=100.0.0.45, expected=True, got=False
+Ping test FAILED: client=h2, target=100.0.0.45, expected=True, got=False
+Ping test FAILED: client=h1, target=100.0.0.45, expected=True, got=False
+Ping test FAILED: client=h1, target=100.0.0.45, expected=True, got=False
+Curl test FAILED: client=h1, target=100.0.0.45, method=POST, payload='', got HTTP 000 (expected success=True)
